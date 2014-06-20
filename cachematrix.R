@@ -3,15 +3,6 @@
 
 ## Creates matrix and uses "<<-" operator to store a copy in cache.
 
-
-      get <- function() x
-      setmean <- function(mean) m <<- mean
-      getmean <- function() m
-      list(set = set, get = get,
-           setmean = setmean,
-           getmean = getmean)
-}
-
 makeCacheMatrix <- function(x = matrix()) {
       m <- NULL
       set <- function(y) {
@@ -39,4 +30,4 @@ cacheSolve <- function(x, ...) {
             m <- solve(data, ...)
             x$setsolve(m)
             m
-      }}
+      }
