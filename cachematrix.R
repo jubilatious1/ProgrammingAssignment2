@@ -1,17 +1,13 @@
 ## Programming Assignment 2
 ## Caching the inverse of a Matrix
+##Two example files have been combined.
+## Input is matrix and uses "<<-" operator to store a copy in cache.
+##Grep 'mean' and replace with 'solve'
 
-## Creates matrix and uses "<<-" operator to store a copy in cache.
-makeCacheMatrix <- function(x=matrix()) {
-      m <- NULL    
-      set <- function(y=integer()) {
-            ##ask for side of square matrix
-            y <- matrix(seq(1, y), nrow=y)
-            ##if(nrow != (max(y)^0.5)) {
-                  ##message("error nrow must be square root of n")
-            ##} else {y=matrix(y, nrow)}
-            return(y)
-            x <<- y
+makeCacheMatrix <- function(numeric(x)) {
+      m <- NULL
+      set <- function(y) {
+            x <<- matrix(y)
             m <<- NULL
       }
       get <- function() x
